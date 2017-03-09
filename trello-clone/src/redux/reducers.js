@@ -83,7 +83,6 @@ function lastCreated(state={}, action) {
 		case ActionTypes.CREATE_CARD:
 		case ActionTypes.CREATE_TAG:
 			return Object.assign({}, state, {[action.type]: action.id})
-			// return [...state, action.id];
 		default:
 			return state;
 	}
