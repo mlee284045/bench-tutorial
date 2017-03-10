@@ -19,6 +19,7 @@ export const cardActions = {
 			type: ActionTypes.CREATE_CARD,
 			id: generateId('card'),
 			card: {
+				editing: false,
 				tags: [],
 				title: title,
 				text: text
@@ -28,9 +29,15 @@ export const cardActions = {
 	updateCard: function (id, key, value) {
 		return {
 			type: ActionTypes.UPDATE_CARD,
-			id: id,
-			key: key,
-			value: value
+			id,
+			key,
+			value
+		}
+	},
+	toggleEdit: function (id) {
+		return {
+			type: ActionTypes.TOGGLE_EDIT,
+			id
 		}
 	},
 	addTag: function (cardId, tagId) {

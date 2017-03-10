@@ -1,5 +1,5 @@
 import React from 'react';
-import ListContainer from './list';
+import ListContainer from './listContainer';
 
 export default class Board extends React.PureComponent {
 	render() {

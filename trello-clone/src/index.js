@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import App from './App';
 import Card from './components/card';
 import { store } from './redux/store';
-import './index.css';
+import './css/index.css';
 
 const Index = () => {
 	return (

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Board from './components/boardContainer.jsx';
 import { store } from './redux/store';
-import './App.css';
+import './css/App.css';
 
 class App extends Component {
 

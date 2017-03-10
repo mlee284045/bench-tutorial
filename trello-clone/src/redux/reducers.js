@@ -20,6 +20,16 @@ function cardReducer (state={}, action) {
 			selectedCard[action.key] = action.value;
 			return Object.assign({}, state, {[action.id]: selectedCard});
 		}
+		case ActionTypes.TOGGLE_EDIT: {
+			let allCards = Object.assign({}, state)
+			Object.keys(allCards).map(function(cardId) {
+				cardId === action.id ? 
+					allCards[action.id].editing = !allCards[action.id].editing :
+					allCards[cardId].editing = false;
+				// Cannot edit multiple cards at once
+			})
+			return Object.assign({}, state, allCards)
+		}
 		case ActionTypes.ADD_TAG_TO_CARD: {
 
 			let selectedCard = Object.assign({}, state[action.cardId]);
