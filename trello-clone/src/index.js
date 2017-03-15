@@ -6,6 +6,7 @@ import App from './App';
 import Card from './components/card';
 import { store } from './redux/store';
 import './css/index.css';
+import './css/font-awesome.css';
 
 const Index = () => {
 	return (

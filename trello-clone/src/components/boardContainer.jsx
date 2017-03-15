@@ -8,6 +8,7 @@ class BoardContainer extends React.Component {
 		super();
 		this.handleChange = this.handleChange.bind(this);
 		this.renderBoard = this.renderBoard.bind(this);
+		this.renderButton = this.renderButton.bind(this);
 		this.addListToCurrentBoard = this.addListToCurrentBoard.bind(this);
 	}
 
@@ -29,12 +30,21 @@ class BoardContainer extends React.Component {
 		)
 	}
 
+	renderButton() {
+		if (Object.keys(this.props.boards).length) {
+			return null;
+		}
+		return (
+			<div className="create-board" onClick={this.handleChange}>
+				<span className="button-text"><i className="fa fa-plus"></i> Create Board</span>
+			</div>
+		)
+	}
+
 	render() {
 		return (
-			<div>
-				<button onClick={this.handleChange}>
-					Create Board
-				</button>
+			<div className="board-container">
+				{this.renderButton()}
 				{Object.keys(this.props.boards)
 							 .filter((id) => this.props.boards[id].selected)
 							 .map(this.renderBoard)}

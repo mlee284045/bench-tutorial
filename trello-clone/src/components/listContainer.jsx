@@ -34,14 +34,16 @@ class ListContainer extends React.Component {
 	render() {
 		return (
 			<div>
-				<div>
-					<button onClick={this.handleChange}>
+				<div className="create-list-container">
+					<div className="create-list" onClick={this.handleChange}>
 						Create List
-					</button>
+					</div>
 				</div>
-				{Object.keys(this.props.lists)
-							 .filter((id) => this.props.listIds.indexOf(id) !== -1)
-							 .map(this.renderList)}
+				<div className="lists container">
+					{Object.keys(this.props.lists)
+								 .filter((id) => this.props.listIds.indexOf(id) !== -1)
+								 .map(this.renderList)}
+				</div>
 			</div>
 		)
 	}

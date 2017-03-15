@@ -19,8 +19,6 @@ class CardContainer extends React.Component {
 	}
 
 	completeEdit(id) {
-		// let toggleEdit = this.props.toggleEdit;
-		// let updateCard = this.props.updateCard;
 		return (title, text) => {
 			this.props.toggleEdit(id);
 			this.props.updateCard(id, 'title', title);
@@ -40,9 +38,11 @@ class CardContainer extends React.Component {
 				<button onClick={this.handleChange}>
 					Create Card
 				</button>
-				{Object.keys(this.props.cards)
-							 .filter((id) => this.props.cardIds.indexOf(id) !== -1)
-							 .map(this.renderCard)}
+				<div className="cards container">
+					{Object.keys(this.props.cards)
+								 .filter((id) => this.props.cardIds.indexOf(id) !== -1)
+								 .map(this.renderCard)}
+				</div>
 			</div>
 		)
 	}

@@ -1,22 +1,85 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Chewy');
+
+html, body {
+	margin: 0;
+	padding: 0;
 }
 
-.app {
-	padding: 10%;
+body {
+	background-color: #E5E7E9;
+}
+
+div {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	background-color: #AED6F1;
+	opacity: .5;
+	padding: 10px 0;
+	margin: 0;
+	top: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.header h1 {
+	font-family: 'Chewy', cursive;
+	letter-spacing: .1em;
+	font-size: 3em;
+}
+
+
+.board-container {
+	padding: 20px;
+	margin: 0;
+	background-color: #E5E7E9;
+}
+
+.create-board, .create-list {
+	padding: 20px 0;
+	margin-bottom: 10px;
+	border: 3px dashed #34495E;
+	cursor: pointer;
+}
+.button-text {
+	font-size: em;
 }
 
 .board {
-	border: 1px dotted blue;
-	margin: 10px;
+	padding: 20px;
+	background-color: white;
+	border: 1px solid #D7DBDD;
+	border-radius: 10px;
+}
+
+.container {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: nowrap;
+	padding: 0;
+}
+
+.lists {
+	flex-direction: row;
+}
+
+.cards {
+	flex-direction: column;
+}
+
+.create-list-container {
+	display: block;
 }
 
 .list {
-	border: 1px dashed red;
-	position: relative;
-	display: inline-block;
+	border: 1px solid #D7DBDD;
+	border-radius: 10px;
+	background-color: #E5E7E9;
+	/* position: relative; */
+	/* display: inline-block; */
 	width: 450px;
 	margin: 10px;
 }
@@ -26,7 +89,10 @@ button {
 }
 
 .card {
-	border: 1px solid black;
+	border: 1px solid #D7DBDD;
+	border-radius: 10px;
+	background-color: white;
 	margin: 10px;
 	padding: 10px;
+	box-shadow: 5px 5px 15px 0 #D7DBDD;
 }
