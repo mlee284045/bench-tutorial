@@ -44,6 +44,7 @@ class BoardContainer extends React.Component {
 	render() {
 		return (
 			<div className="board-container">
+				<h1>TITLE</h1>
 				{this.renderButton()}
 				{Object.keys(this.props.boards)
 							 .filter((id) => this.props.boards[id].selected)

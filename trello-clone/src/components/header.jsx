@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import Navbar from './navbar';
 
 export const Header = () => (
 	<div className="header">
-		<h1>KANBAN</h1>
+		<Navbar />
 	</div>
 )
