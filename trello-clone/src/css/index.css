@@ -17,6 +17,11 @@ div {
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
 .header {
 	background-color: #A9CCE3;
 	padding: 10px 0;
@@ -103,10 +108,32 @@ button {
 }
 
 .navbar-container {
-	text-align: left;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .navbar-container div {
 	display: flex;
-
+	flex-direction: row;
+}
+.nav-items-left {
+	flex-grow: 3;
+}
+.nav-items-logo {
+	flex-grow: 1;
+	justify-content: center;
+}
+.nav-items-right {
+	flex-grow: 3;
+	justify-content: flex-end;
+}
+.nav-items-left a {
+	flex-basis: 15%;
+}
+.nav-items-logo a {
+	
+}
+.nav-items-right a {
+	flex-basis: 15%;
 }
